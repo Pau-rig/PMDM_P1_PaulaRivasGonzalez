@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MarketList</string>
+    <string name="login">Sign In</string>
+    <string name="user">Username</string>
+    <string name="pass">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="welcome_user">Welcome, %1$s</string>
+    <string name="list_titulo">Pending Purchases</string>
+    <string name="buscador">Search product...</string>
+
+    <string-array name="categorias">
+        <item>Fruits &amp; Vegetables</item>
+        <item>Dairy</item>
+        <item>Cleaning Products</item>
+        <item>Snacks</item>
+    </string-array>
+</resources>
