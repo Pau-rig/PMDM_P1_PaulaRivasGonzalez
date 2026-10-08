@@ -1,9 +1,32 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.PMDM_P1_PaulaRivasGonzalez" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary"></item>
+    </style>
+    <style name="Theme.PMDM_P1_PaulaRivasGonzalez" parent="Base.Theme.PMDM_P1_PaulaRivasGonzalez" />
+
+    <style name="EstiloTituloPrincipal">
+        <item name="android:textSize">32dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_texto_principal</item>
     </style>
 
-    <style name="Theme.PMDM_P1_PaulaRivasGonzalez" parent="Base.Theme.PMDM_P1_PaulaRivasGonzalez" />
+    <style name="EstiloBotonesPrincipales">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_texto_botones_princial</item>
+        <item name="android:backgroundTint">@color/color_primario</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="EstiloBotonesSecundorios">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/color_primario</item>
+        <item name="android:backgroundTint">@color/color_transparente</item>
+        <item name="android:borderlessButtonStyle">@color/color_primario</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+
 </resources>

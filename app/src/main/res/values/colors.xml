@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="color_primario">#FFD2EBB5</color>
+    <color name="color_primario">#FF023A02</color>
     <color name="color_secundario">#FFD17770</color>
+    <color name="color_detalles">#FFD2EBB5</color>
     <color name="color_fondo">#EFE9D3</color>
     <color name="color_texto_titulo">#FF023A02</color>
     <color name="color_texto_principal">#FF000000</color>
+    <color name="color_texto_botones_princial">#EFE9D3</color>
+    <color name="color_transparente">#00EFE9D3</color>
 </resources>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PMDM_P1_PaulaRivasGonzalez</string>
+    <string name="app_name">MarketList</string>
     <string name="login">Iniciar Sesión</string>
     <string name="user">Nombre de usuario</string>
     <string name="pass">Contraseña</string>
