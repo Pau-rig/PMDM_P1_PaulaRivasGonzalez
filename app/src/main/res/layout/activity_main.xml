@@ -7,14 +7,151 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bienvenido a CheckList"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity ="center_horizontal"
+        android:padding="24dp"
+        android:background="@color/color_fondo"
+        android:orientation="vertical">
+
+        <!-- Cabecera -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@color/color_primario">
+
+
+            <!-- Carrito -->
+            <ImageView
+                android:id="@+id/imgcarrito"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/list_titulo"
+                android:src="@drawable/ic_cart"/>
+
+            <!--Texto-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/EstiloTituloLista"
+                android:text="@string/list_titulo"/>
+
+        </LinearLayout>
+
+        <!-- Bienvenida -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/welcome_user"
+            android:textColor="@color/color_primario"
+            android:textSize="30sp"/>
+
+        <!-- buscador -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/color_secundario"
+            android:hint="@string/buscador"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/color_primario"/>
+
+        <!-- separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/color_primario"/>
+
+        <!-- Listado -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Categoria 1 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Frutas y Verduras"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_primario"/>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="Platanos"
+                    android:textColor="@color/color_texto_principal"/>
+
+                <!-- Categoria 2 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Lácteos"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_primario"/>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="Leche entera"
+                    android:textColor="@color/color_texto_principal"/>
+
+                <!-- Categoria 3 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Limpieza"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_primario"/>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="Detergente"
+                    android:textColor="@color/color_texto_principal"/>
+
+                <!-- Categoria 4 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Aperitivos"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_primario"/>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="Galletas"
+                    android:textColor="@color/color_texto_principal"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
