@@ -1,8 +1,8 @@
 # MarketList
 
 ## Indice
-1. [Análisis del Desarrollo Móvil](#1-análisis-del-desarrollo-móvil)
-2. [Especificación de la App](#2-especificación-de-la-app)
+1. [Análisis del Desarrollo Móvil](##1-análisis-del-desarrollo-móvil)
+2. [Especificación de la App](##2-especificación-de-la-app)
 3. [Entorno de Desarrollo](#3-entorno-de-desarrollo)
 4. [Recursos de la Aplicación](#4-recursos-de-la-aplicación)
 5. [Cómo Ejecutarla](#5-cómo-ejecutarla)
@@ -259,7 +259,13 @@ Este seria el diagrama  de los casos de uso que tendria mi aplicación:
     check -->|La app decta el cambio de estado del producto y lo cambia en el codigo el estado| CE
     CE -->|La app visualiza el nuevo estado del producto| CR
 ```
+## 3. Entorno de desarrollo
+Los dos dispositivos virtuales que he eligido:
 
+| DISPOSITIVOS | TIPO              | RESOLUCIÓN  | DPI     | API     | SISTEMA OPERATIVO |
+|--------------|-------------------|-------------|---------|---------|-------------------| 
+| Pixel 8      | Movil: Smartphone | 1080 X 2400 | 420 dpi | API37.2 | Android 17.0      |
+| Pixel Table  | Tablet            | 2560 X 1600 | 320 dpi | API35   | Android 15.0      |
 
 ## 6. Bibliografia
 - https://developer.android.com/guide/components/activities/activity-lifecycle?hl=es-419
