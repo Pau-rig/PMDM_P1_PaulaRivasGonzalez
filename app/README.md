@@ -99,3 +99,168 @@ El usuario lo comienza al cerrar la pantalla actual, por lo que la Activiti pier
 
 Y por ultimo se destrulle con onDestroy() por lo que si el usuario esta en la pantalla principal esta se saldra de la aplicación.
 
+## 2. Especificación de tu app
+
+### 1. Idea y Público Objetivo
+#### Idea 
+MarketList es una aplicacion móvil nativa diseñada en android Studio diseñada para organizar los productos necesarios de tu lista de la compra. Con esta aplicación los usuarios puede planificar los productos que se necesitan adquirir y organizarlos por categorias y poder marcarlos una vez odtenidos en tiempo real.
+
+#### Público Objetivo
+Adultos y jovenes la fanja de edad seria de entre 17 a 75 que tiene la capacidad de realizar las compras periodicamente en el hogar, ellos valoran la rapidez y la agilidad con la que peuden realizar agulizar un proceso rutinario ayudando a evitar olvidos.
+
+#### 3 objetivos
+Aqui planteamos 3 objetivos medibles para el funcionamiento de la aplicación.
+- **Tiempo de acceso e inicio de sesión:** El usuario puede completar la autenticación y el ingreso de la pantalla principal en menos de 15 segundos.
+- **Efectividad de busqueda:** Garantiza wue el filtrado de los producto para añadirlos a la lista devuelva resultados en menos de 3 segundos.
+- **Optimitación de recursos:** El consumo de la memoria RAM sea inferios de 50 MB mientras se interactua continuamente con la aplicación.
+
+### 2. Requisitos funcionales
+Aunque estan los requisitos funcionales que tiene mi aplicación.
+
+| RF   | DESCRIPCIÓN | PRIORIDAD |
+|------| --- | --- |
+| RF-1 | El usuario podra iniciar sesión en la app introduciones su nombre de usuario y contraseña en el Login. | Alta |
+| RF-2 | La pantalla principal se mostrara la lista de los productos por categorias | Alta |
+| RF-3 | El usuario puede buscar los producto y flitrar mediante un buscador | Medio |
+| RF-4 | La aplicacion se puede mostrar en español y ingles | Media |
+| RF-5 | El usuario puede marcar como completada los productos de la lista mediantes estos este en el carrito | Baja |
+
+### 3. Requisitos No funcionales
+- **RNF-01 (Usabilidad):** Todos los elementos de la aplicación que son interactivos cuentan con una zona minima de 48dp x 48dp para asegurar el facil uso con los dedos
+- **RNF-02 (Compatibilidad):** La aplicación como minimo tiene que ser Android 7.0 Nougat (API 24), si se elige no es necesario que se tenga que recurir a librerias de soporte.
+- **RNF-03 (Rendimiento):** La pantalla de carga iniciara y estara todos sus elementos visuales inferior a 1,5 segundos.
+- **RNF-04 (Mantenibilidad y Arquitectura):** Todos los colores estan definidos en los archivos correspondientes es su carpeta.
+
+### 4. Casos de Uso
+Este seria el diagrama  de los casos de uso que tendria mi aplicación:
+
+#### Ficha caso 1: Iniciar Sesion
+| Campo             | Detalle                                            |
+|-------------------|----------------------------------------------------|
+| Nombre del Caso   | CU-01: Iniciar Sesion                              |
+| Actor             | Usuario                                            | 
+| Precondición      | La aplicacion se encuentra en la pantalla de login |
+| Postcondición     | El usuario accede con exito                        |
+
+- Flujo principal
+
+```mermaid
+    graph TD 
+    Usuario[Usuario]
+    CU01[Pantalla Login]
+    Usus[Campo Usuario]
+    Pass[Campo Contrseña]
+    Logi[Boton Login]
+    App[Pantalla principal]
+
+    Usuario -->|El usuario entar en la pantalla de Login| CU01  
+    CU01 -->|El usuario introduce su nombre en el campo usuario| Usus
+    Usus -->|El usuario introduce su contraseña en el campo contraseña| Pass
+    Pass -->|El usuario pulsa el boton de Ingresar| Logi
+    Logi -->|La aplicacion validad las credenciales y navega a la pantalla principla| App
+```
+- Flujo alternativo
+
+```mermaid
+    graph TD 
+    Usuario[Usuario]
+    CU01[Pantalla Login]
+    Campo[Campo Vacio]
+    Men[Mensaje de error]
+    App[Pantalla login ]
+
+    Usuario -->|El usuario entar en la pantalla de Login| CU01  
+    CU01 -->|Al usuario se le olvida renellar un campo| Campo
+    Campo -->|Mensaje de error por detectar un campo vacio| Men
+    Men -->|El usuario se queda en la pantalla de Login hasta corregir los datos| App
+```
+
+#### Ficha caso 2: Consultar Lista de Compras                   |
+
+| Campo             | Detalle                                             |
+|-------------------|-----------------------------------------------------|
+| Nombre del Caso   | CU-02: Consultar Lista de Compras                   |
+| Actor             | Usuario                                             | 
+| Precondición      | La aplicacion se encuentra en la pantalla de Inicio |
+| Postcondición     | La lista es visible y se puede interartuar con ella |
+
+- Flujo principal
+
+```mermaid
+    graph TD 
+    Usuario[Usuario]
+    CU02[Pantalla Principal]
+    FV[Frutas y Verduras]
+    L[Lácteos]
+    check[CheckBox]
+    A[Scroll]
+
+    Usuario -->|El usuario entar en la pantalla Principal| CU02
+
+
+    CU02 -->|Al usuario se le muestra las categorias Frutas y Verduras| FV
+    CU02 -->|Al usuario se le muestra las categorias Lácteos| L
+
+    L -->|Lácteos sus productos tiene un CheckBox| check
+
+    FV -->|Frutas y Verduras sus productos tiene un CheckBox| check
+    
+    check -->|El usuario se desplaza por los elementos| A
+```
+
+- Flujo alternativo
+```mermaid
+    graph TD 
+    Usuario[Usuario]
+    CU02[Pantalla Principal]
+    C[Categorias vacias]
+    A[Scroll]
+
+    Usuario -->|El usuario entar en la pantalla Principal| CU02
+
+
+    CU02 -->|Al usuario se le muestra las categorias vacias porque no hay productos añadidos| C
+
+    C -->|El usuario se desplaza para seguir navegando | A
+```
+#### Caso 3: Buscar Producto
+
+```mermaid
+    graph TD 
+    Usuario[Usuario]
+    Busca[Busacador]
+    pro[Procesa]
+    fli[Flitra]
+    Produc[Productos Flitrados]
+    A[Scroll]
+
+    Usuario -->|El usuario introduce un termino de busqueda| Busca
+    Busca -->|Se detecta un cambio en el texto | pro
+    pro -->|la aplicacion con el cambio busca productos en la memoria que concidadn con el texto introducida |fli
+    fli -->|Se adtualiza la lista utilizando el listado mostrando los productos flitrados | Produc
+    Produc -->|El usuario se desplaza para revisar los productos flitrados | A
+```
+#### Caso 4: Marcar Producto como Comprado
+
+```mermaid
+    graph TD 
+    Usuario[Usuario]
+    App[Paguina Principal]
+    Produc[Productos]
+    check[CheckBox]
+    A[Scroll]
+    CE[Cambio del estado]
+    CR[Checkbox marcado]
+
+    Usuario -->|El usuario entra y se muestra un listado de categorias| App
+    App -->|La aplicacion muestra cada producto con su CheckBox| Produc
+    Produc -->|El usuario empieza a despazarse para revisar los elementos| A
+    A -->|El usuario pulsa sobre el CheckBox para marcarlo como dentro del carrito| check
+    check -->|La app decta el cambio de estado del producto y lo cambia en el codigo el estado| CE
+    CE -->|La app visualiza el nuevo estado del producto| CR
+```
+
+
+## 6. Bibliografia
+- https://developer.android.com/guide/components/activities/activity-lifecycle?hl=es-419
+- https://developer.android.com/guide/components/fundamentals?hl=es-419
