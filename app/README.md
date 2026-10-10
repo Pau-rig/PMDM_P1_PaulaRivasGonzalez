@@ -97,13 +97,13 @@ Nada mas destruida inmediatamente la Activiti se crea desde cero y se ejecuta on
 ##### El usuario pulsa el botón Atrás
 El usuario lo comienza al cerrar la pantalla actual, por lo que la Activiti pierde la interacion y visibilidad por lo que pasa por onPause() y onStop() para guardar los datos.
 
-Y por ultimo se destrulle con onDestroy() por lo que si el usuario esta en la pantalla principal esta se saldra de la aplicación.
+Y por ultimo se destruye con onDestroy() por lo que si el usuario esta en la pantalla principal esta se saldra de la aplicación.
 
 ## 2. Especificación de tu app
 
 ### 1. Idea y Público Objetivo
 #### Idea 
-MarketList es una aplicacion móvil nativa diseñada en android Studio diseñada para organizar los productos necesarios de tu lista de la compra. Con esta aplicación los usuarios puede planificar los productos que se necesitan adquirir y organizarlos por categorias y poder marcarlos una vez odtenidos en tiempo real.
+MarketList es una aplicación móvil nativa diseñada en android Studio diseñada para organizar los productos necesarios de tu lista de la compra. Con esta aplicación los usuarios puede planificar los productos que se necesitan adquirir y organizarlos por categorias y poder marcarlos una vez odtenidos en tiempo real.
 
 #### Público Objetivo
 Adultos y jovenes la fanja de edad seria de entre 17 a 75 que tiene la capacidad de realizar las compras periodicamente en el hogar, ellos valoran la rapidez y la agilidad con la que peuden realizar agulizar un proceso rutinario ayudando a evitar olvidos.
@@ -260,12 +260,61 @@ Este seria el diagrama  de los casos de uso que tendria mi aplicación:
     CE -->|La app visualiza el nuevo estado del producto| CR
 ```
 ## 3. Entorno de desarrollo
-Los dos dispositivos virtuales que he eligido:
+### Dispositivos 
+Los dos dispositivos virtuales que he eligido: 
 
 | DISPOSITIVOS | TIPO              | RESOLUCIÓN  | DPI     | API     | SISTEMA OPERATIVO |
 |--------------|-------------------|-------------|---------|---------|-------------------| 
 | Pixel 8      | Movil: Smartphone | 1080 X 2400 | 420 dpi | API37.2 | Android 17.0      |
 | Pixel Table  | Tablet            | 2560 X 1600 | 320 dpi | API35   | Android 15.0      |
+
+### Ejecución
+Aquí podemos ver como se ven la aplicación ejecutada:
+
+1. Movil: Pixel 8
+
+**Pantalla Login**
+
+![Pantalla Login Movil](app/capturas/Pantalla%20Login%20Movil.png)
+
+**Pantalla Principal**
+
+![Pantalla Principal Movil](app/capturas/Pantalla%20Principal%20Movil.png)
+
+---
+
+2. Tablet: Pixel Table
+
+**Pantalla Login**
+
+![Pantalla Login Tablet](app/capturas/Pantalla%20Login%20Tablet.png)
+
+**Pantalla Principal**
+
+![Pantalla Principal Tablet](app/capturas/Pantalla%20Principal%20Tablet.png)
+
+
+### Estructura del proyecto
+El proyecto sigue la siguiente estructura:
+Toda la estructura esta dentro de una carpeta llamada app.
+Dentro de app esta las siguientes carpetas: sampledata, manifests, kotlin+java, res y KeepRules
+
+La carpeta manifests continen un archivo importante llamado AndroidManifest.xml
+AndroidManifest.xml es un archivo de configuración global del sistema es esencial para la aplicación de las dos actividades 
+
+La siguiente carpeta kotlin+java dentro se encuentra la carpeta es.medac.paularivasgonzalez.app donde se guarda las clases javas LoginActivity.java y MainActivity.java.
+
+La carpeta res(Recursos de la aplicación) Almacena todos los recursos de la aplicación que son los siguientes archivos:
+- **drawable:** Contiene las imágenes gráficos de la app: img_logo.png y ic_cart.xml que son las dos imágenes que he creado.
+- **layout:** Contiene los diseños XML de las pantallas: activity_login.xml y activity_main.xml
+- **mipmap:** Almacena todos los iconos adaptativos de la app
+- **values:** Esta carpeta contiene los archivos estáticos como: colors.xml(Declarar la paleta de colores) themes.xml (Declarar los estilos) y strings.xml (Declara textos para reutilizar y en otros idiomas).
+
+La última carpeta importante es la Gradle Scripts donde los archivos de configuración y automatización de la compilación.
+
+Android aplicada la separación entre el funcionamiento java que es donde se controla el comportamiento ejecutable y interacción del usuario (Activity (Java)) y la interfaz del usuario donde se define de forma declarativa el aspecto visual de la pantalla (Layout (XML) en res/layout/).
+
+Estas dos carpetas se vinculan en el metodo onCreate() de la clase Java donde se vinculan las clases java con su xml y al ejecutarse la clase java puede controlar e interactuar con los gráficos. 
 
 ## 6. Bibliografia
 - https://developer.android.com/guide/components/activities/activity-lifecycle?hl=es-419
