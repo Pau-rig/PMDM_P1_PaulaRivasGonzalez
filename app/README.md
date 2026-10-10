@@ -1,17 +1,12 @@
 # MarketList
 
 ## Indice
-1. [Análisis del Desarrollo Móvil](##1-análisis-del-desarrollo-móvil)
-2. [Especificación de la App](##2-especificación-de-la-app)
-3. [Entorno de Desarrollo](#3-entorno-de-desarrollo)
-4. [Recursos de la Aplicación](#4-recursos-de-la-aplicación)
-5. [Cómo Ejecutarla](#5-cómo-ejecutarla)
-6. [Capturas de Pantalla](#6-capturas-de-pantalla)
-7. [Bibliografía y Fuentes](#7-bibliografía-y-fuentes)
+
+
 
 ---
 
-## 1. Análisis del Desarrollo Móvil
+## Parte A
 A la hora de realizar una aplicacion tenemos que analizar donde vamos a realizarla.
 
 Si queremos que esta se realize en un movil tenemos que analizar como seria el desarrollo por ello trataremos los siguientes puntos:
@@ -99,7 +94,9 @@ El usuario lo comienza al cerrar la pantalla actual, por lo que la Activiti pier
 
 Y por ultimo se destruye con onDestroy() por lo que si el usuario esta en la pantalla principal esta se saldra de la aplicación.
 
-## 2. Especificación de tu app
+---
+
+## Parte B
 
 ### 1. Idea y Público Objetivo
 #### Idea 
@@ -259,7 +256,9 @@ Este seria el diagrama  de los casos de uso que tendria mi aplicación:
     check -->|La app decta el cambio de estado del producto y lo cambia en el codigo el estado| CE
     CE -->|La app visualiza el nuevo estado del producto| CR
 ```
-## 3. Entorno de desarrollo
+---
+
+## Parte C
 ### Dispositivos 
 Los dos dispositivos virtuales que he eligido: 
 
@@ -271,27 +270,25 @@ Los dos dispositivos virtuales que he eligido:
 ### Ejecución
 Aquí podemos ver como se ven la aplicación ejecutada:
 
-1. Movil: Pixel 8
+#### Movil: Pixel 8
 
-**Pantalla Login**
+- **Pantalla Login**
 
-![Pantalla Login Movil](app/capturas/Pantalla%20Login%20Movil.png)
+![Pantalla Login Movil](capturas/Pantalla%20Login%20Movil.png)
 
-**Pantalla Principal**
+- **Pantalla Principal**
 
-![Pantalla Principal Movil](app/capturas/Pantalla%20Principal%20Movil.png)
+![Pantalla Principal Movil](capturas/Pantalla%20Principal%20Movil.png)
 
----
+#### Tablet: Pixel Table
 
-2. Tablet: Pixel Table
+- **Pantalla Login**
 
-**Pantalla Login**
+![Pantalla Login Tablet](capturas/Pantalla%20Login%20Tablet.png)
 
-![Pantalla Login Tablet](app/capturas/Pantalla%20Login%20Tablet.png)
+- **Pantalla Principal**
 
-**Pantalla Principal**
-
-![Pantalla Principal Tablet](app/capturas/Pantalla%20Principal%20Tablet.png)
+![Pantalla Principal Tablet](capturas/Pantalla%20Principal%20Tablet.png)
 
 
 ### Estructura del proyecto
@@ -316,6 +313,51 @@ Android aplicada la separación entre el funcionamiento java que es donde se con
 
 Estas dos carpetas se vinculan en el metodo onCreate() de la clase Java donde se vinculan las clases java con su xml y al ejecutarse la clase java puede controlar e interactuar con los gráficos. 
 
+---
+
+## Parte D
+
+Aquí justificaremos las decisiones tomadas del diseño.
+
+### Internacionalización
+
+Para que la aplicación sea 100% mantenible tenemos realizar todas las cadenas de texto para que sea archivos XML extraído:
+
+Hemos realizado dos strings.xml:
+
+- **Strings.xml predeterminado(Español)**
+
+![Strings Español](capturas/Strings%20Español.png)
+
+- **Strings.xml (Ingles)**
+
+![Strings Español](capturas/Strings%20Ingles.png)
+
+### Imágenes
+
+Hemos realizado varios tipos de formatos para la aplicación
+
+- Mapa de bits: Se usa para presentacion en la pantalla de inicio de sesión como un logotipo. este se utiliza para realizar imagenes complejas o fotografias mas detalladas.
+- Vector Asset: Este formato lo hemos utilizado para un icono en la cabezera junto al título de compras pendientes, lo he utilizado en esta sección porque los graficos no pierden calidad a la hora de realizar una escalda a diferentes escaladas de pantalla.
+
+La última imágen que he realizado para este dispositivo es un Icono Adaptativo para que se adapte a los diferentes dispositivos Android.
+
+### Colores
+
+Los colores que he elegido para esta aplicación se ha hecho pensando en la accesibilidad visual y utilizando colores que recuerdan a la alimentacion saludable como lo sería el color verde.
+
+Por eso he utilizado el verde como color principal para la aplicación y un verde mas clarito para los detalles, mientras que he utilizado un salmon un rojo no tan estridente como color secundario para generar contraste.
+El fondo he eligido un créma más suave para la vista en vez de un blanco mas estidente.
+
+---
+
+## Conclusión
+
+
+
+---
+
 ## 6. Bibliografia
 - https://developer.android.com/guide/components/activities/activity-lifecycle?hl=es-419
 - https://developer.android.com/guide/components/fundamentals?hl=es-419
+- https://developer.android.com/studio/write/vector-asset-studio?hl=es-419
