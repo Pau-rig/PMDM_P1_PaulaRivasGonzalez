@@ -1,8 +1,26 @@
 # MarketList
 
-## Indice
+## 
 
+1. [Aplicación](#aplicación)
+2. [Parte A: Análisis del Desarrollo Móvil](#parte-a)
+3. [Parte B: Especificación de la App](#parte-b)
+4. [Parte C: Entorno de Desarrollo](#parte-c)
+5. [Parte D: Recursos de la Aplicación](#parte-d)
+6. [Conclusión](#conclusión)
+7. [Bibliografía](#bibliografia)
 
+---
+## Aplicación
+
+- **Nombre:** MarketList
+- **Descripción:** 
+Es una aplicación movíl de dos pantallas una un Login para reguistrarse y otra una pantalla inicioa que consta de un listado de productos separado por categorias. Sirbe como una lista de la compra. Cuenta en dos idiomas el Español y el Ingles.
+- **Capturas:**
+
+![Login Movil](capturas/Pantalla%20Login%20Movil.png) 
+ 
+![Principal Movil](capturas/Pantalla%20Principal%20Movil.png)
 
 ---
 
@@ -327,11 +345,11 @@ Hemos realizado dos strings.xml:
 
 - **Strings.xml predeterminado(Español)**
 
-![Strings Español](capturas/Strings%20Español.png)
+![Strings Español](capturas/Strings%20Espa%C3%B1ol.png)
 
 - **Strings.xml (Ingles)**
 
-![Strings Español](capturas/Strings%20Ingles.png)
+![Strings Inglés](capturas/Strings%20Ingles.png)
 
 ### Imágenes
 
@@ -352,12 +370,17 @@ El fondo he eligido un créma más suave para la vista en vez de un blanco mas e
 ---
 
 ## Conclusión
+Con esta práctica he aprendido mucho del funcionamiento de Android Studio y la estructora que compone una aplicación movil.
 
+Por ejemplo he aprendido a manejar la carpeta de res donde se encuentran todos los recuarsos de la parte de la interfaz de la aplicación.
 
+Pero mis mayores deficultates se encontraron a la hora de realizar la configuracion de la segunda pantalla y como conetarlas y que luego estas funcionen en la emulación para pasar de una a otra. 
+
+Realmente esta practica me ha ayudado a reafirmar los conceptos básicos del desarrollo movil.
 
 ---
 
-## 6. Bibliografia
+## Bibliografia
 - https://developer.android.com/guide/components/activities/activity-lifecycle?hl=es-419
 - https://developer.android.com/guide/components/fundamentals?hl=es-419
 - https://developer.android.com/studio/write/vector-asset-studio?hl=es-419
