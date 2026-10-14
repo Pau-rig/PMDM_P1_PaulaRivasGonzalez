@@ -18,9 +18,9 @@
 Es una aplicación movíl de dos pantallas una un Login para reguistrarse y otra una pantalla inicioa que consta de un listado de productos separado por categorias. Sirbe como una lista de la compra. Cuenta en dos idiomas el Español y el Ingles.
 - **Capturas:**
 
-![Login Movil](capturas/Pantalla%20Login%20Movil.png) 
+![Login Movil](/capturas/Pantalla%20Login%20Movil.png) 
  
-![Principal Movil](capturas/Pantalla%20Principal%20Movil.png)
+![Principal Movil](/capturas/Pantalla%20Principal%20Movil.png)
 
 ---
 
@@ -292,21 +292,21 @@ Aquí podemos ver como se ven la aplicación ejecutada:
 
 - **Pantalla Login**
 
-![Pantalla Login Movil](capturas/Pantalla%20Login%20Movil.png)
+![Pantalla Login Movil](/capturas/Pantalla%20Login%20Movil.png)
 
 - **Pantalla Principal**
 
-![Pantalla Principal Movil](capturas/Pantalla%20Principal%20Movil.png)
+![Pantalla Principal Movil](/capturas/Pantalla%20Principal%20Movil.png)
 
 #### Tablet: Pixel Table
 
 - **Pantalla Login**
 
-![Pantalla Login Tablet](capturas/Pantalla%20Login%20Tablet.png)
+![Pantalla Login Tablet](/capturas/Pantalla%20Login%20Tablet.png)
 
 - **Pantalla Principal**
 
-![Pantalla Principal Tablet](capturas/Pantalla%20Principal%20Tablet.png)
+![Pantalla Principal Tablet](/capturas/Pantalla%20Principal%20Tablet.png)
 
 
 ### Estructura del proyecto
@@ -345,11 +345,11 @@ Hemos realizado dos strings.xml:
 
 - **Strings.xml predeterminado(Español)**
 
-![Strings Español](capturas/Strings%20Espa%C3%B1ol.png)
+![Strings Español](/capturas/Strings%20Espa%C3%B1ol.png)
 
 - **Strings.xml (Ingles)**
 
-![Strings Inglés](capturas/Strings%20Ingles.png)
+![Strings Inglés](/capturas/Strings%20Ingles.png)
 
 ### Imágenes
 
